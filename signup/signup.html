@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Sign up</title>
+</head>
+<style>
+body{
+    background-color: #d19f72;
+}
+*{
+    font-family: 'Lato', sans-serif;
+}
+.sign-up-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sign-up-main > form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+#submit-button{
+    align-self: flex-end;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #875626;        
+}
+#password-alert{
+    visibility: hidden;
+    color: #ff0000;
+}
+</style>
+<body>
+    <div class="sign-up-main">
+        <h1>Create your account</h1>
+        <img src="../images/PinClipart.com_catering-clip-art_5398038.png" alt="bubble tea"
+        style="width: 150px; height: 220px;"><br>
+        <form action="../signup/signup.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username"><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password"><br>
+            <label for="confirm-password">Confirm password:</label>
+            <input type="password" name="confirm-password" id="confirm-password"><br>
+            <button type="submit" id="submit-button" name="submit-create-account">Submit</button>
+        </form><br>
+        <h3 id="password-alert">
+            Confirm password and Password do not match
+        </h3>
+    </div>
+    <script>
+        function passwordCheck(){
+            password = document.getElementById("password").value
+            confirmPassword = document.getElementById("confirm-password").value
+            if (password != confirmPassword){
+                return false;
+            }else if(username=='' ||  password=='' || confirmPassword==''){
+                return false
+            }else{
+                return true;
+            }
+        }
+        setInterval(passwordCheck, 100)
+    </script>
+</body>
+</html>

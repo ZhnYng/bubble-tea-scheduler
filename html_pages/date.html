@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Date</title>
+</head>
+<style>
+    body{
+        background-color: #d19f72;
+        font-family: 'Lato', sans-serif;
+    }
+    .body-title{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .body-title > form{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+    }
+    #submit-button{
+        align-self: flex-end;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        color: #875626;        
+    }
+</style>
+
+<body class="body-title">
+    <h1>Last time you had bubble tea:</h1>
+    <img src="../images/PinClipart.com_catering-clip-art_5398038.png" alt="bubble tea"
+    style="width: 150px; height: 220px;">
+    <form action="../php/recentBubbleTea.php" method="post">
+        <label for="date">Date:</label>
+        <input type="text" name="date"><br>
+        <label for="month">Month:</label>
+        <input type="text" name="month"><br>
+        <label for="year">Year:</label>
+        <input type="text" name="year" value="2022"><br>
+        <button type="submit" id="submit-button" name="submit-bubble-tea">Submit</button>
+    </form>
+</body>
+</html>

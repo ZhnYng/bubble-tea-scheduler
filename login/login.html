@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../signup/signup.css">
+    <title>Log in</title>
+</head>
+<style>
+    body{
+    background-color: #d19f72;
+    }
+    *{
+        font-family: 'Lato', sans-serif;
+    }
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title > form{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+    }
+    #submit-button{
+        align-self: flex-end;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        color: #875626;        
+    }
+    #login-alert{
+        visibility: hidden;
+        font-weight: bold;
+        text-align: center;
+        color: #ff0000;
+    }
+</style>
+<body>
+    <div class="title">
+        <h1>Log in</h1>
+        <form action="../login/login.php" method="post">
+            <label for="username">Username: </label>
+            <input name="username" id="username"><br>
+            <label for='password'>Password: </label>
+            <input name="password" id="password" type="password"><br>
+            <button id="submit-button" type="submit" name="submit-login">Submit</button>
+        </form>
+    </div><br>
+    <div id="login-alert">Both fields cannot be empty</div>
+</body>
+<script>
+    function checkEmpty(){
+        let username = document.getElementById("username").value
+        let password = document.getElementById("password").value
+        if(username==''||password==''){
+            return false
+        }else{
+            return true
+        }
+    }
+    setInterval(checkEmpty, 100)
+</script>
+</html>

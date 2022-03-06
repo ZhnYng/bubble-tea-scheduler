@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Bubble Tea Scheduler</title>
+</head>
+<style>
+    body{
+        background-color: #d19f72;
+        overflow: hidden;
+    }
+    *{
+        font-family: 'Lato', sans-serif;
+    }
+    .bubble-tea-image{
+        position: absolute;
+        left: 49%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+    }
+    .bubble-tea-image > img{
+        width: 50px;
+        height: 75px;
+    }
+    .title{
+        text-align: center;
+        font-size: 20px;
+    }
+    .button {
+        font-weight: bold;
+        text-decoration: none;
+        background-color: #EEEEEE;
+        color: #000000;
+        padding: 40px 120px;
+        border-top: 1px solid #333333;
+        border-right: 3px solid #333333;
+        border-bottom: 3px solid #333333;
+        border-left: 1px solid #333333;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+    .buttons{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .margin-for-main-page{
+        margin-top: 175px;
+    }
+    .main-page{
+        transform: scale(0.001);
+    }
+</style>
+<body>
+    <div class="bubble-tea-image" id="bubble-tea-image">
+        <img src="../images/PinClipart.com_catering-clip-art_5398038.png" alt="bubble tea"><br>
+    </div>
+    <div class="margin-for-main-page" id="margin-for-main-page"></div>
+    <div class="main-page" id="main-page">
+        <div class="title" id="title">
+            <h1>Bubble Tea Scheduler</h1>
+        </div>
+        <div class="buttons" id="buttons">
+            <a class="button" href="../login/login.html">Log In</a>
+            <h3>-or-</h3>
+            <a class="button" href="../signup/signup.html">Sign Up</a>
+        </div>
+    </div>
+</body>
+<script>
+    function zoom(){
+        pic = document.getElementById("bubble-tea-image").style
+        pic.transition = "transform 2s";
+        pic.transform = "scale(400)";
+    }
+    function picDisappear(){
+        pic = document.getElementById("bubble-tea-image").style
+        pic.visibility = 'hidden';
+    }
+    setTimeout(zoom, 1000);
+    setTimeout(picDisappear, 2000)
+
+    function mainPageZoom(){
+        mainPageStyle = document.getElementById("main-page").style
+        mainPageStyle.transform = "scale(0.9)";
+        mainPageStyle.transition = "transform 0.9s";
+    }
+    setTimeout(mainPageZoom, 1000)
+</script>
+</html>
