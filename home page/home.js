@@ -84,3 +84,17 @@ addEventListener('click', ()=>{
 })
 
 renderCalendar()
+
+window.onload = function() {
+
+    sessionStart = Date.now();
+    timer = setInterval(function() {
+        if (Date.now() - sessionStart > 5 * 60 * 60 * 1000) {
+            clearTimeout(timer);
+            alert("Session Timed out");
+            window.location = "../landing/landing.php";
+        }
+    }, 1000);
+
+
+};
