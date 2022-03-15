@@ -5,125 +5,254 @@
 body{
     background-color: #d19f72;
 }
-.nav-bar{
-    display: flex;
-    flex-direction: column;
+
+@media only screen and (min-width: 800px) {
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-bar > a{
+        color: #ffffff;
+        background-color: #875626;
+        text-decoration: none;
+        /* text-align: center; */
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 25px;
+    }
+    .nav-bar > a:hover{
+        background-color: #693a0b;
+    }
+    .nav-buttons > a:hover{
+        background-color: #693a0b;
+    }
+    .hero-image{
+        border-bottom: 3px solid #f5deb3;
+        background-color: #c0834e;
+        text-align: center;
+        padding: 50px 0px 50px 0px;
+    }
+    .content{
+        border-top: 3px solid #f5deb3;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .content-box{
+        border: 2px solid #f5deb3;
+        border-radius: 15px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin: 0px 30px 40px 30px;
+        text-align: center;
+    }
+    .calendar{
+        background-color: #e2d6bf;
+        border-radius: 30px;
+        width: 20rem;
+        height: 23rem;
+        margin: auto;
+        /* zoom: 0.8; */
+    }
+    .month{
+        border-radius: 30px 30px 0px 0px;
+        width: 100%;
+        height: 5rem;
+        background-color: #875626;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+    }
+    .month > a{
+        display: flex;
+        align-items: center;
+        margin: 0 1rem 0 1rem;
+        font-size: 2rem;
+        border-radius: 15px;
+        background-color:  #b46e30;
+        box-shadow: 2px 2px #5a381a;
+        padding: 0 12px 6px 12px;
+    }
+    .weekdays{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .weekdays div{
+        margin-top: 20px;
+        font-size: 1.1rem;
+        font-weight: 400;
+        font-weight: bold;
+        width: calc(20rem/7);
+        display: flex;
+        justify-content: space-around
+    }
+    .days{
+        width: 100%;
+        height: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        /* padding: 0.1rem; */
+    }
+    /* .days div:hover:not(.prev-date, .next-date){
+        outline: 0.2rem solid #ffffff;
+        outline-offset: 0.2rem;
+        cursor: pointer;
+    } */
+    .days div{
+        font-size: 1rem;
+        /* margin-left: 0.6rem; */
+        /* margin: auto; */
+        width: calc(20rem/7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .prev-date, .next-date{
+        opacity: 0.3;
+    }
+    .footer{
+        margin-bottom: 200px;
+    }
+    .today{
+        background-color: #875626;
+        color: #ffffff;
+    }
+    .prev-arrow, .next-arrow{
+        cursor: pointer;
+    }
+    .bubble-tea-date{
+        width: 25px;
+        height: 37px;
+        margin: auto;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+    }
 }
-.nav-bar > a{
-    color: #ffffff;
-    background-color: #875626;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 25px;
-}
-.nav-bar > a:hover{
-    background-color: #693a0b;
-}
-.nav-buttons > a:hover{
-    background-color: #693a0b;
-}
-.hero-image{
-    border-bottom: 3px solid #f5deb3;
-    background-color: #c0834e;
-    text-align: center;
-    padding: 50px 0px 50px 0px;
-}
-.content{
-    border-top: 3px solid #f5deb3;
-    text-align: center;
-    padding-top: 40px;
-}
-.content-box{
-    border: 2px solid #f5deb3;
-    border-radius: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin: 0px 30px 40px 30px;
-    text-align: center;
-}
-.calendar{
-    background-color: #e2d6bf;
-    border-radius: 30px;
-    width: 20rem;
-    height: 23rem;
-    margin: auto;
-    /* zoom: 0.8; */
-}
-.month{
-    border-radius: 30px 30px 0px 0px;
-    width: 100%;
-    height: 5rem;
-    background-color: #875626;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-}
-.month > a{
-    display: flex;
-    align-items: center;
-    margin: 0 1rem 0 1rem;
-    font-size: 2rem;
-    border-radius: 15px;
-    background-color:  #b46e30;
-    box-shadow: 2px 2px #5a381a;
-    padding: 0 12px 6px 12px;
-}
-.weekdays{
-    display: flex;
-    justify-content: space-evenly;
-}
-.weekdays div{
-    margin-top: 20px;
-    font-size: 1.1rem;
-    font-weight: 400;
-    font-weight: bold;
-    width: calc(20rem/7);
-    display: flex;
-    justify-content: space-around
-}
-.days{
-    width: 100%;
-    height: 65%;
-    display: flex;
-    flex-wrap: wrap;
-    /* padding: 0.1rem; */
-}
-/* .days div:hover:not(.prev-date, .next-date){
-    outline: 0.2rem solid #ffffff;
-    outline-offset: 0.2rem;
-    cursor: pointer;
-} */
-.days div{
-    font-size: 1rem;
-    /* margin-left: 0.6rem; */
-    /* margin: auto; */
-    width: calc(20rem/7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.prev-date, .next-date{
-    opacity: 0.3;
-}
-.footer{
-    margin-bottom: 200px;
-}
-.today{
-    background-color: #875626;
-    color: #ffffff;
-}
-.prev-arrow, .next-arrow{
-    cursor: pointer;
-}
-.bubble-tea-date{
-    width: 25px;
-    height: 37px;
-    margin: auto;
-    justify-content: center;
-    align-self: center;
-    justify-self: center;
+
+@media only screen and (max-width: 800px) {
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-bar > a{
+        color: #ffffff;
+        background-color: #875626;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 25px;
+    }
+    .nav-bar > a:hover{
+        background-color: #693a0b;
+    }
+    .nav-buttons > a:hover{
+        background-color: #693a0b;
+    }
+    .hero-image{
+        border-bottom: 3px solid #f5deb3;
+        background-color: #c0834e;
+        text-align: center;
+        padding: 50px 0px 50px 0px;
+    }
+    .content{
+        border-top: 3px solid #f5deb3;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .content-box{
+        border: 2px solid #f5deb3;
+        border-radius: 15px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin: 0px 30px 40px 30px;
+        text-align: center;
+    }
+    .calendar{
+        background-color: #e2d6bf;
+        border-radius: 30px;
+        width: 20rem;
+        height: 23rem;
+        margin: auto;
+        /* zoom: 0.8; */
+    }
+    .month{
+        border-radius: 30px 30px 0px 0px;
+        width: 100%;
+        height: 5rem;
+        background-color: #875626;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+    }
+    .month > a{
+        display: flex;
+        align-items: center;
+        margin: 0 1rem 0 1rem;
+        font-size: 2rem;
+        border-radius: 15px;
+        background-color:  #b46e30;
+        box-shadow: 2px 2px #5a381a;
+        padding: 0 12px 6px 12px;
+    }
+    .weekdays{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .weekdays div{
+        margin-top: 20px;
+        font-size: 1.1rem;
+        font-weight: 400;
+        font-weight: bold;
+        width: calc(20rem/7);
+        display: flex;
+        justify-content: space-around
+    }
+    .days{
+        width: 100%;
+        height: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        /* padding: 0.1rem; */
+    }
+    /* .days div:hover:not(.prev-date, .next-date){
+        outline: 0.2rem solid #ffffff;
+        outline-offset: 0.2rem;
+        cursor: pointer;
+    } */
+    .days div{
+        font-size: 1rem;
+        /* margin-left: 0.6rem; */
+        /* margin: auto; */
+        width: calc(20rem/7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .prev-date, .next-date{
+        opacity: 0.3;
+    }
+    .footer{
+        margin-bottom: 200px;
+    }
+    .today{
+        background-color: #875626;
+        color: #ffffff;
+    }
+    .prev-arrow, .next-arrow{
+        cursor: pointer;
+    }
+    .bubble-tea-date{
+        width: 25px;
+        height: 37px;
+        margin: auto;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+    }
 }

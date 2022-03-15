@@ -12,19 +12,43 @@
 </head>
 <style>
     body{
-    background-color: #d19f72;
+        margin: 0%;
+        background-color: #d19f72;
+        overflow: hidden;
     }
     *{
         font-family: 'Lato', sans-serif;
     }
-    .title{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    @media only screen and (max-width: 800px) {
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            zoom: 150%;
+            margin-top: 5em;
+        }
+        .title > form{
+            display: flex;
+            flex-direction: column;
+        }
     }
-    .title > form{
-        display: flex;
-        flex-direction: column;
+    @media only screen and (min-width: 800px) {
+        .title{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            zoom: 150%;
+            justify-content: space-evenly;
+            padding: 8em 0;
+        }
+        .title > form{
+            display: flex;
+            flex-direction: column;
+        }
+        .border{
+            border-top: 5em solid #875626;
+            border-bottom: 5em solid #875626;
+        }
     }
     input{
         font-family: 'Lato', sans-serif;
@@ -44,17 +68,19 @@
     }
 </style>
 <body>
-    <div class="title">
-        <h1>Log in</h1>
-        <form action="../login/login.php" method="post">
-            <label for="username">Username: </label>
-            <input name="username" id="username"><br>
-            <label for='password'>Password: </label>
-            <input name="password" id="password" type="password"><br>
-            <button id="submit-button" type="submit" name="submit-login">Submit</button>
-        </form>
-    </div><br>
-    <div id="login-alert">Both fields cannot be empty</div>
+    <div class="border">
+        <div class="title">
+            <h1>Log in</h1>
+            <form action="../login/login.php" method="post">
+                <label for="username">Username: </label>
+                <input name="username" id="username"><br>
+                <label for='password'>Password: </label>
+                <input name="password" id="password" type="password"><br>
+                <button id="submit-button" type="submit" name="submit-login">Submit</button>
+            </form>
+        </div><br>
+        <div id="login-alert">Both fields cannot be empty</div>
+    </div>
 </body>
 <script>
     function checkEmpty(){
