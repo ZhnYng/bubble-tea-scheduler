@@ -61,38 +61,45 @@ $_SESSION["beentohomepage"] = true
     <title>Home</title>
 </head>
 <body>
-    <div class="hero-image">
-        <img src="../images/PinClipart.com_catering-clip-art_5398038.png" alt="bubble tea"
-        style="width: 150px; height: 220px;"><br>
-    </div>
-    <div class="nav-bar">
-        <a href="../home page/home.php">Home</a>
-        <a href="../landing/landing.php">Log out</a>
-        <a href="../html_pages/date.html">Change date</a>
-    </div>
-    <div class="content">
-        <div class="content-box">
-            <h1>Next bubble tea on</h1>
-            <h3><?php echo $next_date->format('d-m-Y') ?></h3>
+    <div class="wrapper">
+        <div class="left-column">
+            <div class="hero-image">
+                <img src="../images/PinClipart.com_catering-clip-art_5398038.png" alt="bubble tea"><br>
+            </div>
+            <div class="nav-bar">
+                <a href="../home page/home.php">Home</a>
+                <a href="../landing/landing.php">Log out</a>
+                <a href="../html_pages/date.html">Change date</a>
+            </div>
+            <div class="content-box-desktop">
+                <h1>Next bubble tea on</h1>
+                <h3><?php echo $next_date->format('d-m-Y') ?></h3>
+            </div>
         </div>
-        <div class="calendar">
-                <div class="month">
-                    <a class="prev-arrow">&#8249</a>
-                    <div class="date">
-                        <h3></h3>
+        <div class="content">
+            <div class="content-box">
+                <h1>Next bubble tea on</h1>
+                <h3><?php echo $next_date->format('d-m-Y') ?></h3>
+            </div>
+            <div class="calendar">
+                    <div class="month">
+                        <a class="prev-arrow">&#8249</a>
+                        <div class="date">
+                            <h3></h3>
+                        </div>
+                        <a class="next-arrow">&#8250</a>
                     </div>
-                    <a class="next-arrow">&#8250</a>
-                </div>
-                <div class="weekdays">
-                    <div>Sun</div>
-                    <div>Mon</div>
-                    <div>Tue</div>
-                    <div>Wed</div>
-                    <div>Thu</div>
-                    <div>Fri</div>
-                    <div>Sat</div>
-                </div>
-                <div class="days">
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days">
+                    </div>
                 </div>
             </div>
         </div>

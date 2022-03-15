@@ -4,19 +4,37 @@
 }
 body{
     background-color: #d19f72;
+    overflow: hidden;
 }
 
 @media only screen and (min-width: 800px) {
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .left-column{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        border: 3px solid #f5deb3;
+        box-sizing: border-box;
+        background-color: #c0834e;
+        height: 100%;
+    }
     .nav-bar{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
+        background-color: #875626;
+        justify-content: space-around;
+        box-sizing: border-box;
+        border-bottom: 3px solid #f5deb3;
     }
     .nav-bar > a{
         color: #ffffff;
         background-color: #875626;
         text-decoration: none;
-        /* text-align: center; */
+        text-align: center;
         display: inline-block;
         padding: 15px 25px;
         font-size: 25px;
@@ -28,36 +46,46 @@ body{
         background-color: #693a0b;
     }
     .hero-image{
-        border-bottom: 3px solid #f5deb3;
         background-color: #c0834e;
         text-align: center;
-        padding: 50px 0px 50px 0px;
+        padding: 50px 0px;
+        box-sizing: border-box;
+        border-bottom: 3px solid #f5deb3;
+    }
+    .hero-image > img{
+        width: 10em; 
+        height: 14.5em;
     }
     .content{
-        border-top: 3px solid #f5deb3;
         text-align: center;
-        padding-top: 40px;
+        float: right;
+        margin-top: 0%;
     }
-    .content-box{
+    .content-box-desktop{
         border: 2px solid #f5deb3;
-        border-radius: 15px;
+        border-radius: 5px;
         padding-top: 25px;
         padding-bottom: 25px;
-        margin: 0px 30px 40px 30px;
+        margin: 16.7% 30px;
         text-align: center;
+        background-color: #d19f72;
+    }
+    .content-box{
+        visibility: hidden;
     }
     .calendar{
         background-color: #e2d6bf;
         border-radius: 30px;
-        width: 20rem;
-        height: 23rem;
-        margin: auto;
-        /* zoom: 0.8; */
+        width: 60rem;
+        height: 40rem;
+        margin-right: 3.5em;
+        /* margin: auto; */
     }
     .month{
         border-radius: 30px 30px 0px 0px;
         width: 100%;
         height: 5rem;
+        font-size: 2.4rem;
         background-color: #875626;
         display: flex;
         justify-content: space-evenly;
@@ -81,10 +109,10 @@ body{
     }
     .weekdays div{
         margin-top: 20px;
-        font-size: 1.1rem;
+        font-size: 2.2rem;
         font-weight: 400;
         font-weight: bold;
-        width: calc(20rem/7);
+        width: calc(60rem/7);
         display: flex;
         justify-content: space-around
     }
@@ -101,10 +129,10 @@ body{
         cursor: pointer;
     } */
     .days div{
-        font-size: 1rem;
+        font-size: 2rem;
         /* margin-left: 0.6rem; */
         /* margin: auto; */
-        width: calc(20rem/7);
+        width: calc(60rem/7);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -123,8 +151,8 @@ body{
         cursor: pointer;
     }
     .bubble-tea-date{
-        width: 25px;
-        height: 37px;
+        width: 2.2rem;
+        height: 3.2rem;
         margin: auto;
         justify-content: center;
         align-self: center;
@@ -158,6 +186,10 @@ body{
         text-align: center;
         padding: 50px 0px 50px 0px;
     }
+    .hero-image > img{
+        width: 10em; 
+        height: 14.5em;
+    }
     .content{
         border-top: 3px solid #f5deb3;
         text-align: center;
@@ -170,6 +202,9 @@ body{
         padding-bottom: 25px;
         margin: 0px 30px 40px 30px;
         text-align: center;
+    }
+    .content-box-desktop{
+        visibility: hidden;
     }
     .calendar{
         background-color: #e2d6bf;
