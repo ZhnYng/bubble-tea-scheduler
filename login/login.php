@@ -18,7 +18,8 @@ if(isset($_POST['submit-login'])){
     }
     $userID = array_search($_SESSION['username'], $all_usernames);
     if(password_verify($password, $all_passwords[$userID])){
-        include "../home page/home.php";
+        header("Location: http://bubble-tea-scheduler.rf.gd/home%20page/home.php");
+        exit;
     }else{
         include "../login/login.html";
         echo "<h3 style='color:red; text-align:center';>" . "Username or Password is wrong" . "</h3>";

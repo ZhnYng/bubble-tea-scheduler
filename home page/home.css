@@ -4,10 +4,13 @@
 }
 body{
     background-color: #d19f72;
-    overflow: hidden;
 }
 
 @media only screen and (min-width: 800px) {
+    body{
+        background-color: #d19f72;
+        overflow: hidden;
+    }
     .wrapper{
         display: flex;
         justify-content: space-between;
@@ -64,8 +67,7 @@ body{
     .content-box-desktop{
         border: 2px solid #f5deb3;
         border-radius: 5px;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding: 20px 0px;
         margin: 16.7% 30px;
         text-align: center;
         background-color: #d19f72;
@@ -164,6 +166,8 @@ body{
     .nav-bar{
         display: flex;
         flex-direction: column;
+        border-bottom: 3px solid #f5deb3;
+
     }
     .nav-bar > a{
         color: #ffffff;
@@ -191,9 +195,8 @@ body{
         height: 14.5em;
     }
     .content{
-        border-top: 3px solid #f5deb3;
         text-align: center;
-        padding-top: 40px;
+        padding: 2em;
     }
     .content-box{
         border: 2px solid #f5deb3;
@@ -204,7 +207,7 @@ body{
         text-align: center;
     }
     .content-box-desktop{
-        visibility: hidden;
+        display: none;
     }
     .calendar{
         background-color: #e2d6bf;
@@ -212,7 +215,6 @@ body{
         width: 20rem;
         height: 23rem;
         margin: auto;
-        /* zoom: 0.8; */
     }
     .month{
         border-radius: 30px 30px 0px 0px;
@@ -253,7 +255,7 @@ body{
         height: 65%;
         display: flex;
         flex-wrap: wrap;
-        /* padding: 0.1rem; */
+        padding: 0.1rem;
     }
     /* .days div:hover:not(.prev-date, .next-date){
         outline: 0.2rem solid #ffffff;

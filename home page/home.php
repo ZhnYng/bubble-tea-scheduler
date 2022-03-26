@@ -74,12 +74,19 @@ $_SESSION["beentohomepage"] = true
             <div class="content-box-desktop">
                 <h1>Next bubble tea on</h1>
                 <h3><?php echo $next_date->format('d-m-Y') ?></h3>
+                <br>
+                <h3>Previous bubble tea</h3>
+                <h5><?php echo $const_initial_date->format('d-m-Y') ?></h5>
             </div>
         </div>
         <div class="content">
             <div class="content-box">
                 <h1>Next bubble tea on</h1>
                 <h3><?php echo $next_date->format('d-m-Y') ?></h3>
+            </div>
+            <div class="content-box">
+                <h1>Previous bubble tea</h1>
+                <h3><?php echo $const_initial_date->format('d-m-Y') ?></h3>
             </div>
             <div class="calendar">
                     <div class="month">
